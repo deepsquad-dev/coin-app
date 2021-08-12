@@ -31,6 +31,10 @@ $headers = $response->getHeaders();
 
 ### Ping
 
+[
+  "gecko_says" => "(V3) To the Moon!",
+]
+
 ### Asset
 
 ### Coins

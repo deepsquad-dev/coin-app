@@ -8,7 +8,6 @@ use Exception;
 
 class Coins extends Api
 {
-
   public function getList(): array
   {
       return $this->get('/coins/list');
@@ -23,7 +22,7 @@ class Coins extends Api
 
   public function getCoin(string $id, array $params = []): array
   {
-      return $this->get('/coins/', $id, $params);
+      return $this->get('/coins/' . $id, $params);
   }
 
   public function getTickers(string $id, array $params = []): array
@@ -52,12 +51,12 @@ class Coins extends Api
       $params['from'] = $from;
       $params['to'] = $to;
 
-      return $this->get('/coins/' . $id . '/market_chart', $params);
+      return $this->get('/coins/' . $id . '/market_chart/range', $params);
   }
 
-  public function getCoinStateUpdates(string $id, array $params = []): array
+  public function getCoinStatusUpdates(string $id, array $params = []): array
   {
-      return $this->get('/coins/' . $id . '/state_updates', $params);
+      return $this->get('/coins/' . $id . '/status_updates', $params);
   }
 
   public function getCoinOHLC(string $id, string $currency, string $days, array $params = []): array

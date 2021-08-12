@@ -10,10 +10,6 @@ class PingController extends Controller
 {
     public function ping()
     {
-        $client = new CoinGecko();
-        $data = $client->ping();
-        //dd($data);
-        return $data;
-        //return new CoinGecko()->ping();
+        return new CoinGecko()->ping();
     }
 }

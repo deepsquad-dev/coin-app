@@ -8,23 +8,25 @@ use Exception;
 
 class Simple extends Api
 {
-  public function getSimplePrice(array $ids = [], array $currencies = [], array $params = []): array
+  public function getSimplePrice(string $ids, string $currencies, array $params = []): array
   {
+      // comma separated lists
       $params['ids'] = $ids;
-      $params['vs_currencies '] = $currencies;
+      $params['vs_currencies'] = $currencies;
 
       return $this->get('/simple/price', $params);
   }
 
-  public function getSimpleTokenPrice(string $id, array $contractAddresses = [], array $currencies = [], array $params = []): array
+  public function getSimpleTokenPrice(string $id, string $contractAddresses, string $currencies, array $params = []): array
   {
-    $params['contract_addresses'] = $contractAddresses;
-    $params['vs_currencies '] = $currencies;
-
+      // comma separated lists
+      $params['contract_addresses'] = $contractAddresses;
+      $params['vs_currencies'] = $currencies;
+       
       return $this->get('/simple/token_price/' . $id, $params);
   }
 
-  public function getSimpleSupportVsCurrences(): array
+  public function getSimpleSupportedVsCurrences(): array
   {
       return $this->get('/simple/supported_vs_currencies');
   }
