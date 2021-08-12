@@ -18,7 +18,7 @@ class Contract extends Api
         $params['vs_currency'] = $currency;
         $params['days'] = $days;
 
-        return $this->get('/coins/' . $id . '/contract/',  $contractAddress . '/market_chart/');
+        return $this->get('/coins/' . $id . '/contract/' .  $contractAddress . '/market_chart/');
     }
 
     public function getContractMarketChartRange(string $id, string $contractAddress, string $currency, string $to, string $from, array $params = []): array
@@ -27,6 +27,6 @@ class Contract extends Api
       $params['to'] = $to;
       $params['from'] = $from;
 
-      return $this->get('/coins/' . $id . '/contract/',  $contractAddress  '/market_chart/range', $params);
+      return $this->get('/coins/' . $id . '/contract/' .  $contractAddress . '/market_chart/range', $params);
     }
 }

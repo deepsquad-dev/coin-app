@@ -8,7 +8,7 @@ use DeepsquadDev\Coingeckowrapper\CoinGecko;
 
 class CoinController extends Controller
 {
-  public function getCoinList()
+  public function getCoinList(): array
   {
       $client = new CoinGecko();
       $data = $client->coins()->getList();
@@ -16,13 +16,13 @@ class CoinController extends Controller
         echo print_r($item);
       }
 
-      //return $data;
+      return [];
   }
 
-  public function getMarkets(/** string $currency, array $params */)
+  public function getMarkets(string $currency, array $params): array
   {
       $client = new CoinGecko();
-      $currency = "btc";
+      //$currency = "btc";
       $data = $client->coins()->getMarkets($currency, []);
       foreach ($data as $item) {
         echo print_r($item);
@@ -41,7 +41,7 @@ class CoinController extends Controller
         echo print_r($item);
       }
 
-      //return $data;
+      return $data;
   }
 
   public function getCoinTickers(string $id, array $params = []): array
