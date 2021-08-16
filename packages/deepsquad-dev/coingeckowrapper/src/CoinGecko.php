@@ -96,9 +96,9 @@ class CoinGecko
       return new Events($this);
   }
 
-  public function exchangesRates(): ExchangesRates
+  public function exchangeRates(): ExchangeRates
   {
-      return new ExchangesRates($this);
+      return new ExchangeRates($this);
   }
 
   public function trending(): Trending

@@ -6,7 +6,7 @@ namespace DeepsquadDev\Coingeckowrapper\Api;
 
 use Exception;
 
-class Event extends Api
+class Events extends Api
 {
     public function getEvents(array $params = []): array
     {

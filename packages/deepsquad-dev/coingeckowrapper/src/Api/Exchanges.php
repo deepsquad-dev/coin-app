@@ -39,6 +39,6 @@ class Exchanges extends Api
     {
         $params['days'] = $days;
 
-        return $this->get('/exchanges/'  . $id . 'volume_chart', $params);
+        return $this->get('/exchanges/'  . $id . '/volume_chart', $params);
     }
 }

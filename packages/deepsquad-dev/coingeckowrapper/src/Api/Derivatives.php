@@ -20,7 +20,7 @@ class Derivatives extends Api
 
       public function getDerivativesExchangesByID(string $id, array $params = []): array
       {
-          return $this->get('/derivatives/exchanges' . $id, $params);
+          return $this->get('/derivatives/exchanges/' . $id, $params);
       }
 
       public function getDerivativesExchangesList(): array

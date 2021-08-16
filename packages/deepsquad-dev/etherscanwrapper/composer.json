@@ -1,0 +1,39 @@
+{
+    "name": "deepsquad-dev/etherscanwrapper",
+    "description": "A PHP Laravel wrapper for the Etherscan APIs",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DeepsquadDev\\Etherscanwrapper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DeepsquadDev\\Coingeckowrapper\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "deepsquad-dev",
+            "email": "martinsdaze@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "^7.3",
+        "ext-json": "*"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "^8.0"
+    },
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "*"
+            ]
+        }
+    }
+}

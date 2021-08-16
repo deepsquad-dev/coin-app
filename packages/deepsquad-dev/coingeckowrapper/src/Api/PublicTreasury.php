@@ -10,6 +10,6 @@ class PublicTreasury extends Api
 {
     public function getPublicTreasury(string $coinId): array
     {
-        return $this->get('/companies/public_treasury/ ' . $coinId);
+        return $this->get('/companies/public_treasury/' . $coinId);
     }
 }
