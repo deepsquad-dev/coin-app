@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use DeepsquadDev\Blockcypherapis\Blockcypher;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+# Test Routes#Martin
+Route::get('/blockcypher/{name}', function ($sName) {
+    $oBc = new Blockcypher();    
+    return $oBc->blockcypher($sName);
 });

@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use DeepsquadDev\Blockcypherapis\Blockcypher;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+# Test Routes#Martin
+Route::get('/blockcypher/{name}', function ($sName) {
+    $oBc = new Blockcypher();    
+    return $oBc->blockcypher($sName);
 });

@@ -1,0 +1,21 @@
+{
+    "name": "deepsquad-dev/blockcypherapis",
+    "description": "A Laravel package implementing the Blockcypher APIs - Bitcoin, Ethereum, Litecoin, Dash, Dogecoin, Bitcoin Testnet3, Blockcypher Test Chain",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DeepsquadDev\\Blockcypherapis\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "deepsquad-dev",
+            "email": "martinsdaze@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "prefer-stable": true
+}

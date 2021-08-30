@@ -1,0 +1,39 @@
+{
+    "name": "deepsquad-dev/coinbase-wrapper",
+    "description": "A wrapper for the Coinbase API",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DeepsquadDev\\CoinbaseWrapper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DeepsquadDev\\CoinbaseWrapper\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "deepsquad-dev",
+            "email": "martinsdaze@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+      "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "^8.0",
+        "orchestra/testbench": "^6.20"
+    },
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "*"
+            ]
+        }
+    }
+}
