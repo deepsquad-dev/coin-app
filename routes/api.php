@@ -19,8 +19,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-# Test Routes#Martin
-Route::get('/blockcypher/{name}', function ($sName) {
+# Test Routes
+Route::get('/blockcypher/name/{name}', function ($sName) {
     $oBc = new Blockcypher();    
     return $oBc->blockcypher($sName);
+});
+
+Route::get('/blockcypher/blockchain', function () {
+    $oBcB = new Blockcypher();    
+    return $oBcB->getBlockchain('bitcoin', 'main');
 });

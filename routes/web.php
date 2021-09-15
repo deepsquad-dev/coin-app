@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use DeepsquadDev\Blockcypherapis\Blockcypher;
-
+use DeepsquadDev\CoinbaseWrapper\Coinbase;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,8 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-# Test Routes#Martin
-Route::get('/blockcypher/{name}', function ($sName) {
+# Test Routes
+Route::get('/blockcypher/name/{name}', function ($sName) {
     $oBc = new Blockcypher();    
     return $oBc->blockcypher($sName);
+});
+
+Route::get('/blockcypher/blockchain', function () {
+    $oBcB = new Blockcypher();    
+    return $oBcB->getBlockchain('bitcoin', 'main');
 });
