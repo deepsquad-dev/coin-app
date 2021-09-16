@@ -7,12 +7,12 @@ namespace DeepsquadDev\EtherscanWrapper\Api;
 use Exception;
 
 /**
- * Tag = earliest, pending, latest
+ *
  */
 class Account extends Api
 {
     /**
-     * 
+     *  Tag = earliest, pending, latest 
      */
     public function getEtherBalanceForSingleAddress(String $address, String $tag)
     {
