@@ -10,8 +10,6 @@ class Etherscan
 {
     const BASE_URI = 'https://api.etherscan.io/api';
 
-    private $apiKey;
-
     private $requester;
 
     public function __construct(?Client $client = null)

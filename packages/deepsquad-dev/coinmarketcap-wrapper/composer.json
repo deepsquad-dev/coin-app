@@ -1,0 +1,21 @@
+{
+    "name": "deepsquad-dev/coinmarketcap-wrapper",
+    "description": "a wrapper for the CoinmarketCap API",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DeepsquadDev\\CoinmarketcapWrapper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "deepsquad-dev",
+            "email": "martinsdaze@gmail.com"
+        }
+    ]
+}
